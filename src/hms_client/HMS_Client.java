@@ -22,6 +22,7 @@ public class HMS_Client {
         gui.setVisible(true);
 
         Registry r= LocateRegistry.getRegistry(1099);
+        System.out.println("connected to Port from client");
 
         LoginController gui_Controller= new LoginController(gui,r);
         //
