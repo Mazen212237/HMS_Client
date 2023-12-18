@@ -24,6 +24,7 @@ public class HMS_Client {
         Registry r= LocateRegistry.getRegistry(1099);
 
         LoginController gui_Controller= new LoginController(gui,r);
+        //
     }
     
 }
