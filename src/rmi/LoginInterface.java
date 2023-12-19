@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 package RMI;
+=======
+package rmi;
+>>>>>>> 0f59855abae173153c0400da806c94e2f425d02a
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
