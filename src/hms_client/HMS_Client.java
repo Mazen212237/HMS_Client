@@ -5,6 +5,7 @@
 package hms_client;
 
 import controllers.LoginController;
+import controllers.ServiceController;
 
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -25,6 +26,7 @@ public class HMS_Client {
         System.out.println("connected to Port from client");
 
         LoginController gui_Controller= new LoginController(gui,r);
+        ServiceController gui_controller = new ServiceController(gui, r);
         //
     }
     

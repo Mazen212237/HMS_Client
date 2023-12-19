@@ -148,16 +148,16 @@ public class Receptionist_Dashboard extends javax.swing.JFrame {
 
     public JPanel getMyPanel(JButton JButton){
        if (JButton == AllRoomsBtn) {
-            // Logic to get panel for All Rooms
-            return new JPanel(); // Replace with actual logic
+            
+            return new JPanel(); 
         } else if (JButton == MenuBtn) {
-            // Logic to get panel for Menu
-            return new JPanel(); // Replace with actual logic
+         
+            return new JPanel(); 
         } else if (JButton == AvailRoomsBtn) {
-            // Logic to get panel for Available Rooms
-            return new JPanel(); // Replace with actual logic
+            
+            return new JPanel(); 
         } else {
-            return null; // Handle other cases if needed
+            return null; 
         }
     }
 
