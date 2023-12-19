@@ -69,7 +69,6 @@ public class SignUpController {
                 String phoneNumber=gui.getPhoneNumberField().getText();
                 String DOB=gui.getDOBField().getText();
                 String address=gui.getAddressField().getText();
-                boolean empty=false;
                 Pattern VALID_EMAIL_ADDRESS_REGEX = Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
                 
 
@@ -107,13 +106,6 @@ public class SignUpController {
 
                 
                 }
-                
-         
-                    
-                    
-                    
-                
-                
                 
             } catch (RemoteException ex) {
                 Logger.getLogger(SignUpController.class.getName()).log(Level.SEVERE, null, ex);
