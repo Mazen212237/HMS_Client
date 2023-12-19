@@ -1,7 +1,7 @@
 package controllers;
 
 import hms_client.LoginWindow;
-import RMI.LoginInterface;
+import rmi.LoginInterface;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
