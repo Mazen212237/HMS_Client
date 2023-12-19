@@ -2,6 +2,7 @@ package controllers;
 
 import hms_client.LoginWindow;
 import RMI.LoginInterface;
+import hms_client.SignUpWindow;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -21,6 +22,7 @@ public class LoginController {
 
         //add action listener for the login button
         gui.getLoginButton().addActionListener(new LognBtnAction());
+        gui.getSignUpButton().addActionListener(new SignUpBtnAction());
     }
     class LognBtnAction implements ActionListener{
 
@@ -57,6 +59,26 @@ public class LoginController {
             } catch (NotBoundException e) {
                 Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, e);
             }
+        }
+    }
+    
+    class SignUpBtnAction implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent ae){
+            try {
+                LoginInterface li = (LoginInterface) r.lookup("Login");
+                SignUpWindow sw=new SignUpWindow();
+                sw.setLocationRelativeTo(null);
+                sw.setVisible(true);
+                SignUpController lc=new SignUpController(sw,r);
+                gui.dispose();
+                
+            } catch (RemoteException ex) {
+                Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (NotBoundException ex) {
+                Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
         }
     }
 }
