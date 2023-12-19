@@ -1,13 +1,9 @@
 package controllers;
 
-import hms_client.LoginWindow;
-<<<<<<< HEAD
 import RMI.LoginInterface;
+import hms_client.ClientDashboard;
+import hms_client.LoginWindow;
 import hms_client.SignUpWindow;
-=======
-import rmi.LoginInterface;
->>>>>>> 0f59855abae173153c0400da806c94e2f425d02a
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.rmi.NotBoundException;
@@ -53,7 +49,14 @@ public class LoginController {
                         System.out.println("No account exist");
                     }
                     else{
-                        gui.getValidationPasswordLabel().setText(result);
+                        if("Guest".equals(result)){
+                            ClientDashboard cdw=new ClientDashboard();
+                            cdw.setLocationRelativeTo(null);
+                            cdw.setVisible(true);
+                            ClientDashboardController cdc=new ClientDashboardController(cdw,r);
+                            gui.dispose();
+                        }
+//                        gui.getValidationPasswordLabel().setText(result);
                         System.out.println("Account Found");
                     }
                 }
